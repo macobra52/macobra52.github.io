@@ -8,6 +8,7 @@
 
 <body style="background-color:black">
 
+<div style="display:inline-block">
 <img src="img/ncard.png" id="0" name="ncard">
 <img src="img/ncard.png" id="1" name="ncard">
 <img src="img/ncard.png" id="2" name="ncard">
@@ -32,8 +33,10 @@
 <img src="img/ncard.png" id="17" name="ncard">
 
 <p>
-<button onclick="reset();">Reset</button>
+<button onclick="reset();">Reset</button> 
+<button style="float:right" onclick="openWin()">Open new window</button>
 </p>
+</div>
 
 <img id="menu" class="context-menu" src="img/card-icons.png">
 
@@ -178,6 +181,10 @@ function reset() {
     for(var i = 0; i < imgs.length; i++) {
         imgs[i].src = img[0];
     }
+}
+
+function openWin() {
+    window.open("index.html", "", "width=390, height=320");
 }
 
 function getPosition(e) {
