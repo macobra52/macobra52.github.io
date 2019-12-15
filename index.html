@@ -32,7 +32,7 @@
 <img src="img/ncard.png" id="17" name="ncard">
 
 <p>
-<button onclick="location.reload();">Reset</button>
+<button onclick="reset();">Reset</button>
 </p>
 
 <img id="menu" class="context-menu" src="img/card-icons.png">
@@ -169,6 +169,14 @@ function close() {
         }
         
         return false;
+    }
+}
+
+function reset() {
+    var imgs = document.getElementsByName("ncard");
+    
+    for(var i = 0; i < imgs.length; i++) {
+        imgs[i].src = img[0];
     }
 }
 
